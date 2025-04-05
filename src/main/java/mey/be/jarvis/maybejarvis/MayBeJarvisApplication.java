@@ -7,7 +7,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import java.util.List;
 import java.util.Set;
 
 @SpringBootApplication
@@ -19,7 +18,7 @@ public class MayBeJarvisApplication {
 
 
 	@Bean
-	public ToolCallbackProvider weatherTools(MathService mathService) {
+	public ToolCallbackProvider tools(MathService mathService) {
 		Set<Object> toolObjectList = Set.of(mathService);
 
 		return  MethodToolCallbackProvider.builder()
